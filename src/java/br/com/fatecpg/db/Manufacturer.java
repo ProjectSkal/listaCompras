@@ -22,7 +22,7 @@ public class Manufacturer {
         String pass = "app";
         Connection con = DriverManager.getConnection(url, user, pass);
         Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT MANUFACTURER_ID, NAME, CITY, STATE, EMAIL FROM MANUFACTURER;");
+        ResultSet rs = stmt.executeQuery("SELECT MANUFACTURER_ID, NAME, CITY, STATE, EMAIL FROM MANUFACTURER");
         while (rs.next()) {
             Manufacturer m = new Manufacturer (
                     rs.getInt("MANUFACTURER_ID"),
