@@ -9,6 +9,6 @@
         <%@include file="WEB-INF/jspf/navbar.jspf"%>
         <h1>Índice</h1>
         <h2><a href="customers.jsp">Clientes</a></h2>
-        <h2><a href="#.jsp">Fabricantes</a></h2>
+        <h2><a href="manufacturers.jsp">Fabricantes</a></h2>
     </body>
 </html>
