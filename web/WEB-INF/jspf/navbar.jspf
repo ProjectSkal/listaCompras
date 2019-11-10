@@ -3,5 +3,6 @@
 <div>
     <a href="index.jsp">ÍNDICE</a>
     |   <a href="customers.jsp">Clientes</a>
+    |       <a href="manufacturers.jsp">Fabricantes</a>
 </div>
 <hr/>
