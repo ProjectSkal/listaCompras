@@ -14,6 +14,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/navbar.jspf"%>
+        <%if (request.getParameter("cliente") != null) {%>
         <% int cod = Integer.parseInt(request.getParameter("cliente"));%>
         <% Customer cliente = Customer.getList().get(cod);%>
         <h1>Cliente: <%= cliente.getName() %></h1>
@@ -45,6 +46,9 @@
             <% } %>
             
         </table>
+            <% } else {%>
+                Cliente não encontrado
+            <%}%>
         
         
     </body>

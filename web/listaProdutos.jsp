@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%if (request.getParameter("fabricante") != null) {%>
         <% int cod = Integer.parseInt(request.getParameter("fabricante"));%>
         <% Manufacturer fabricante = Manufacturer.tragaFabricante(cod);%>
         <h1>Cliente: <%= fabricante.getName() %></h1>
@@ -36,5 +37,8 @@
             <% } %>
             
         </table>
+            <% } else {%>
+                Fabricante não encontrado
+            <%}%>
     </body>
 </html>
