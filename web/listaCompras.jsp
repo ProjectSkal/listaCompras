@@ -9,47 +9,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet">
+        <title></title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/navbar.jspf"%>
-        <%if (request.getParameter("cliente") != null) {%>
-        <% int cod = Integer.parseInt(request.getParameter("cliente"));%>
-        <% Customer cliente = Customer.getList().get(cod);%>
-        <h1>Cliente: <%= cliente.getName() %></h1>
-        
-        <table border="1">
-            <tr>
-                <td>Compra</td>
-                <td>Produto</td>
-                <td>Valor Unt</td>
-                <td>Quantidade</td>
-                <td>Total</td>
-                <td>Data</td>
-                <td>Loja</td>
-            </tr>
-            <% try { %>
-                <% for (Compras c: Compras.getListCompras(cod)) { %>
-                <tr>
-                    <td><%= c.getCodigoCompra() %></td>
-                    <td><%= c.getNomeProduto() %></td>
-                    <td><%= c.getValor() %></td>
-                    <td><%= c.getValor() %></td>
-                    <td><%= c.getQuantidade() %></td>
-                    <td><%= c.getData() %></td>
-                    <td><%= c.getLoja() %></td>
-                </tr>
+        <div>
+            <%@include file="WEB-INF/jspf/navbar.jspf"%>
+        </div>
+        <div class="container">
+            <% int cod = Integer.parseInt(request.getParameter("cliente"));%>
+            <% Customer cliente = Customer.getList().get(cod);%>
+            <p class="p1">Cliente</p>
+            <p class="p2"><%= cliente.getName()%></p>
+            <table >
+                <thead>
+                    <tr>
+                        <th class="th-padding">Compra</th>
+                        <th class="th-padding">Produto</th>
+                        <th class="th-padding">Valor Unt</th>
+                        <th class="th-padding">Quantidade</th>
+                        <th class="th-padding">Total</th>
+                        <th class="th-padding">Data</th>
+                        <th class="th-padding">Loja</th>
+                    </tr>
+                </thead>
+                <% try { %>
+                <% for (Compras c : Compras.getListCompras(cod)) {%>
+                <tbody>
+                    <tr>
+                        <td><%= c.getCodigoCompra()%></td>
+                        <td><%= c.getNomeProduto()%></td>
+                        <td><%= c.getValor()%></td>
+                        <td><%= c.getValor()%></td>
+                        <td><%= c.getQuantidade()%></td>
+                        <td><%= c.getData()%></td>
+                        <td><%= c.getLoja()%></td>
+                    </tr>
+                </tbody>
                 <% } %>
-            <% } catch (Exception e) { %>
-            <tr><td colspan="3"><%= e.getMessage() %></td></tr>
-            <% } %>
-            
-        </table>
-            <% } else {%>
-                Cliente não encontrado
-            <%}%>
-        
-        
+                <% } catch (Exception e) {%>
+                <tr><td colspan="3"><%= e.getMessage()%></td></tr>
+                    <% }%>
+            </table>
+        </div>
     </body>
 </html>

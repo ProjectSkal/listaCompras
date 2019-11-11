@@ -1,8 +1,68 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<div>
-    <a href="index.jsp">ÍNDICE</a>
-    |   <a href="customers.jsp">Clientes</a>
-    |       <a href="manufacturers.jsp">Fabricantes</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="<%= request.getContextPath()%>/home.jsp">
+            <img src="<%= request.getContextPath()%>/img/b1.PNG" width="30" height="40" alt="">
+        </a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="customers.jsp">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="listaD.jsp">Frabricantes</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-12">
+                <div class="input-group">
+                    <input type="search" placeholder="Tá procurando o que?" aria-describedby="button-addon1"
+                           class="form-control border-0 bg-light search">
+                    <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <a class="navbar-brand" href="<%= request.getContextPath()%>/home.jsp" style="padding: 0px 10px 0px 100px;">
+                <img src="img/bas.png" width="30" height="40" alt="">
+            </a>
+        </form>
+    </div>
+</nav>
+<div class="guide">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="p-2 bd-highlight" style="padding: 0px 30px !important;">
+                <a href="#">
+                    <p>Eletrodomésticos e Casa</p>
+                </a>
+            </div>
+            <div class="p-2 bd-highlight" style="padding: 0px 30px !important;">
+                <a href="#">
+                    <p>Informártica</p>
+                </a>
+            </div>
+            <div class="p-2 bd-highlight" style="padding: 0px 30px !important;">
+                <a href="#">
+                    <p>Games e PC</p>
+                </a>
+            </div>
+            <div class="p-2 bd-highlight" style="padding: 0px 30px !important;">
+                <a href="#">
+                    <p>Celulares</p>
+                </a>
+            </div>
+            <div class="p-2 bd-highlight" style="padding: 0px 30px !important;">
+                <a href="#">
+                    <p>Esportes</p>
+                </a>
+            </div>
+            <div class="p-2 bd-highlight" style="padding: 0px 50px !important;">
+                <a href="#">
+                    <p>Móveis e Decoração</p>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<hr/>

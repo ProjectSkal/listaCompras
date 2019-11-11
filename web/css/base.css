@@ -1,0 +1,96 @@
+* {
+    font-family: 'Hind Madurai', sans-serif !important;
+}
+
+body {
+    background-color: #212529 !important;
+}
+
+.p {
+    margin-top: 2rem !important;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.p1 {
+    margin-top: 2rem !important;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.p2 {
+    margin: none !important;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.search {
+    margin-left: 10px !important; 
+    width: 430px !important;
+}
+
+.guide {
+    background-color: rgb(228, 19, 24);
+    padding: 12px 0px 0px 0px; 
+    font-weight: bold;
+}
+
+.guide a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.img {
+    padding: 10px 0px;
+}
+
+.img img {
+    border: 1px solid rgb(228, 19, 24);
+}
+
+table {
+    background: rgb(255, 255, 255) transparent;
+    display: table;
+    border-collapse: separate !important;
+    border-spacing: 1px;
+    border-color: #FFF;
+    text-decoration: none !important;
+    color: #fff;
+    margin: auto;
+}
+
+thead {
+    background-color: rgb(228, 19, 24) !important;
+}
+
+thead th {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 10px 60px;
+    background-color: rgb(228, 19, 24) !important;
+    text-decoration: none !important;
+}
+
+thead th.th-padding{
+    padding: 10px 30px;
+}
+
+tbody td {
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none !important;
+}
+
+tbody td.td-center {
+    text-align: center;
+}
+
+tbody td.td-padding {
+    padding: 4px;
+}

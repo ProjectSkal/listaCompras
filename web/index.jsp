@@ -1,14 +1,75 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Índice - JavaDB</title>
-    </head>
-    <body>
+    
+<head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <div>
         <%@include file="WEB-INF/jspf/navbar.jspf"%>
-        <h1>Índice</h1>
-        <h2><a href="customers.jsp">Clientes</a></h2>
-        <h2><a href="manufacturers.jsp">Fabricantes</a></h2>
-    </body>
+    </div>
+    <img src="img/bf.jpg" alt="Smiley face" style="width: 100%; height: auto;"></img>
+    <div class="container">
+        <p class="p">Os melhores produtos estão aqui</p>
+        <div class="row img">
+            <div class="col">
+                <a href="#">
+                    <img src="img/s1.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s2.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s3.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s4.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+        </div>
+        <div class="row img">
+            <div class="col">
+                <a href="#">
+                    <img src="img/s5.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s6.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s7.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <img src="img/s8.PNG" alt="" height="380" width="232"></img>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
 </html>
