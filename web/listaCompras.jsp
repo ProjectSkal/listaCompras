@@ -11,8 +11,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/base.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet">
-        <title></title>
+        <title>Lista de Compras</title>
     </head>
     <body>
         <div>
@@ -26,7 +27,7 @@
             <table >
                 <thead>
                     <tr>
-                        <th class="th-padding">Compra</th>
+                        <th class="th-padding">ID</th>
                         <th class="th-padding">Produto</th>
                         <th class="th-padding">Valor Unt</th>
                         <th class="th-padding">Quantidade</th>
@@ -54,5 +55,10 @@
                     <% }%>
             </table>
         </div>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>

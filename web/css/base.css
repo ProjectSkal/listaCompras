@@ -6,6 +6,16 @@ body {
     background-color: #212529 !important;
 }
 
+.a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.a:hover{
+    color: white;
+    text-decoration: none !important;
+}
+
 .p {
     margin-top: 2rem !important;
     color: #fff;
