@@ -16,6 +16,7 @@
                 <th>Cidade</th>
                 <th>Estado</th>
                 <th>E-mail</th>
+                <th>Detalhes</th>
             </tr>
             <% try { %>
                 <% for (Manufacturer m: Manufacturer.getList()) { %>
@@ -24,7 +25,8 @@
                     <td><%= m.getName() %></td>
                     <td><%= m.getCity() %></td>
                     <td><%= m.getState() %></td>
-                    <td><%= m.getEmail() %></td>
+                    <td><%= m.getEmail() %></td>                    
+                    <td><a href="<%= "listaProdutos.jsp?fabricante=" + m.getId() %>">Ver Produtos</a></td>
                 </tr>
                 <% } %>
             <% } catch (Exception e) { %>

@@ -86,5 +86,12 @@ public class Manufacturer {
     }
     
     
-    
+    public static Manufacturer tragaFabricante(int codigo) throws Exception {
+        for (Manufacturer m: Manufacturer.getList()) {
+            if (m.getId() == codigo) {
+                return m;
+            }
+        }
+        return null;
+    }    
 }
