@@ -21,7 +21,6 @@ public class Compras {
     private float valor;
     private int codigoCompra;
     private int quantidade;
-    private String data;
     private String loja;
     
     public static ArrayList<Compras> getListCompras(int cod) throws Exception {
@@ -38,7 +37,6 @@ public class Compras {
         "    produto.PURCHASE_COST valor,\n" +
         "    compra.ORDER_NUM codigo_compra,\n" +
         "    compra.QUANTITY quantidade,\n" +
-        "    compra.SALES_DATE data,\n" +
         "    compra.FREIGHT_COMPANY loja\n" +
         "FROM \n" +
         "    CUSTOMER cliente\n" +
@@ -56,7 +54,6 @@ public class Compras {
                     rs.getFloat("valor"),
                     rs.getInt("codigo_compra"),
                     rs.getInt("quantidade"),
-                    rs.getString("data"),
                     rs.getString("loja")                    
             );
             list.add(comp);
@@ -65,13 +62,12 @@ public class Compras {
         return list;
     }
 
-    public Compras(String codigoProduto, String nomeProduto, float valor, int codigoCompra, int quantidade, String data, String loja) {
+    public Compras(String codigoProduto, String nomeProduto, float valor, int codigoCompra, int quantidade, String loja) {
         this.codigoProduto = codigoProduto;
         this.nomeProduto = nomeProduto;
         this.valor = valor;
         this.codigoCompra = codigoCompra;
         this.quantidade = quantidade;
-        this.data = data;
         this.loja = loja;
     }
 
@@ -113,14 +109,6 @@ public class Compras {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
     }
 
     public String getLoja() {

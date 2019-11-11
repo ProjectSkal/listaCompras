@@ -3,6 +3,7 @@
     Created on : 10/11/2019, 22:53:07
     Author     : luizv
 --%>
+<%@page import="java.text.NumberFormat"%>
 <%@page import="br.com.fatecpg.db.Manufacturer"%>
 <%@page import="br.com.fatecpg.db.Producao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -23,6 +24,7 @@
             <%if (request.getParameter("fabricante") != null) {%>
             <% int cod = Integer.parseInt(request.getParameter("fabricante"));%>
             <% Manufacturer fabricante = Manufacturer.tragaFabricante(cod);%>
+            <% NumberFormat valor = NumberFormat.getCurrencyInstance(); %>
             <p class="p1">Fabricante</p>
             <p class="p2"><%= fabricante.getName()%></p>
 
@@ -40,7 +42,7 @@
                     <tr>
                         <td><%= c.getCodigoProduto()%></td>
                         <td><%= c.getNomeProduto()%></td>
-                        <td><%= c.getValor()%></td>
+                        <td><%= valor.format(c.getValor())%></td>
                     </tr>
                 </tbody>
                 <% } %>

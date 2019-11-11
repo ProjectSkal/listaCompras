@@ -3,6 +3,10 @@
     Created on : 10/11/2019, 19:40:03
     Author     : luizv
 --%>
+<%@page import="java.sql.Date"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.NumberFormat"%>
 <%@page import="br.com.fatecpg.db.Compras"%>
 <%@page import="br.com.fatecpg.db.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,6 +26,7 @@
         <div class="container">
             <% int cod = Integer.parseInt(request.getParameter("cliente"));%>
             <% Customer cliente = Customer.getList().get(cod);%>
+            <% NumberFormat valor = NumberFormat.getCurrencyInstance(); %>
             <p class="p1">Cliente</p>
             <p class="p2"><%= cliente.getName()%></p>
             <table >
@@ -32,7 +37,6 @@
                         <th class="th-padding">Valor Unt</th>
                         <th class="th-padding">Quantidade</th>
                         <th class="th-padding">Total</th>
-                        <th class="th-padding">Data</th>
                         <th class="th-padding">Loja</th>
                     </tr>
                 </thead>
@@ -43,9 +47,8 @@
                         <td><%= c.getCodigoCompra()%></td>
                         <td><%= c.getNomeProduto()%></td>
                         <td><%= c.getValor()%></td>
-                        <td><%= c.getValor()%></td>
                         <td><%= c.getQuantidade()%></td>
-                        <td><%= c.getData()%></td>
+                        <td><%= valor.format(c.getQuantidade() * c.getValor())%></td>
                         <td><%= c.getLoja()%></td>
                     </tr>
                 </tbody>
