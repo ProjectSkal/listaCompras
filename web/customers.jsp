@@ -14,6 +14,7 @@
                 <th>ID</th>
                 <th>Nome</th>
                 <th>E-mail</th>
+                <th>Detalhes</th>
             </tr>
             <% try { %>
                 <% for (Customer c: Customer.getList()) { %>
@@ -21,6 +22,7 @@
                     <td><%= c.getId() %></td>
                     <td><%= c.getName() %></td>
                     <td><%= c.getEmail() %></td>
+                    <td><a href="<%= "listaCompras.jsp?cliente=" + c.getId() %>">Ver Compras</a></td>
                 </tr>
                 <% } %>
             <% } catch (Exception e) { %>
